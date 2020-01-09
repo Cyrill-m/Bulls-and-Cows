@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootMain" prefHeight="240.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bullsandcows.FXML_MainController">
+   <children>
+      <Button fx:id="btnNewGame" layoutX="179.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnNewGameAction" prefHeight="25.0" prefWidth="130.0" text="НОВАЯ ИГРА" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+      <ToggleButton fx:id="tbtnEN" layoutX="274.0" layoutY="161.0" mnemonicParsing="false" onAction="#localeAction" text="EN" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="tbtnLang" />
+         </toggleGroup>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </ToggleButton>
+      <ToggleButton fx:id="tbtnRU" layoutX="235.0" layoutY="161.0" mnemonicParsing="false" onAction="#localeAction" selected="true" text="RU" textAlignment="CENTER" toggleGroup="$tbtnLang" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="45.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </ToggleButton>
+      <ToggleButton fx:id="tbtnDCSS" layoutX="193.0" layoutY="165.0" mnemonicParsing="false" onAction="#actionDCSS" prefWidth="22.0" text="D" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="85.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="tbtnCSS" />
+         </toggleGroup>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </ToggleButton>
+      <ToggleButton fx:id="tbtnWCSS" layoutX="155.0" layoutY="165.0" mnemonicParsing="false" onAction="#actionWCSS" prefWidth="24.0" selected="true" text="W" textAlignment="CENTER" toggleGroup="$tbtnCSS" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="115.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </ToggleButton>
+      <Separator layoutX="197.0" layoutY="160.0" prefHeight="0.0" prefWidth="130.0" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="lbNumber" alignment="CENTER" layoutX="182.0" layoutY="45.0" prefHeight="25.0" prefWidth="130.0" text="Label" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button layoutX="179.0" layoutY="75.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="1" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="80.0" />
+      <Button layoutX="212.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="2" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="80.0" />
+      <Button layoutX="245.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="3" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="80.0" />
+      <Button layoutX="284.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="4" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0" />
+      <Button layoutX="179.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="5" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="110.0" />
+      <Button layoutX="215.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="6" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="110.0" />
+      <Button layoutX="250.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="7" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="110.0" />
+      <Button layoutX="285.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="8" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="110.0" />
+      <Button layoutX="179.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="9" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="140.0" />
+      <Button layoutX="215.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnNumberAction" prefHeight="25.0" prefWidth="25.0" text="0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="140.0" />
+      <Button fx:id="btnClear" layoutX="250.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnClearAction" prefHeight="25.0" prefWidth="60.0" text="Сброс" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="140.0" />
+      <Button fx:id="btnEnter" layoutX="179.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnEnterAction" prefHeight="25.0" prefWidth="130.0" text="ВВОД" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="170.0" />
+      <Label fx:id="lbField" alignment="TOP_LEFT" layoutX="14.0" layoutY="63.0" prefHeight="165.0" prefWidth="130.0" text="Label" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="51.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="2.0" left="4.0" right="2.0" top="2.0" />
+         </padding></Label>
+      <Separator layoutX="10.0" layoutY="49.0" prefHeight="0.0" prefWidth="130.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="48.0" />
+      <Label fx:id="lbInfo" layoutX="14.0" layoutY="12.0" prefHeight="25.0" prefWidth="130.0" text="Label" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+         <padding>
+            <Insets bottom="2.0" left="4.0" right="2.0" top="2.0" />
+         </padding></Label>
+      <Separator layoutX="147.0" layoutY="23.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="20.0" />
+   </children>
+</AnchorPane>
